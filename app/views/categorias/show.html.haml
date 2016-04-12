@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @categoria.nome
+%p
+  %b Pai:
+  = @categoria.pai.nome if !@categoria.pai.nil?
+
+= link_to 'Edit', edit_categoria_path(@categoria)
+\|
+= link_to 'Back', categorias_path
